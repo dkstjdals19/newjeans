@@ -21,7 +21,7 @@ export default function Music() {
 
   return (
   <div className=" flex justify-center items-center min-h-screen p-6 bg-gradient-to-b from-blue-50 via-blue-100 to-teal-50">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
       {songs.map((song, idx) => (
         <div key={idx} className="flex flex-col items-center bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border-1">
           <h3 className="text-gray-800 text-lg font-bold mb-2 text-center">{song.title}</h3>
