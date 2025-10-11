@@ -3,6 +3,7 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { CiInstagram } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 
@@ -20,12 +21,12 @@ export default function Home() {
           <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             뉴진스 멤버들, 음악, 소개가 있는 팬 페이지
           </p>
-          <a
-            href="\music"
+          <Link
+            to="\music"
             className="inline-block px-8 py-3 bg-pink-400 text-white font-bold rounded-full shadow-md hover:bg-pink-500 transition duration-300 transform hover:scale-105"
           >
             음악 듣기
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -86,12 +87,12 @@ export default function Home() {
         </div>
 
         {/* 멤버들 보러가기 버튼 */}
-        <a
-          href="\members"
+        <Link
+          to="\members"
           className="inline-block px-8 py-3 bg-pink-400 text-white font-bold rounded-full shadow-md hover:bg-pink-500 transition duration-300 transform hover:scale-105"
         >
           멤버들 보러가기
-        </a>
+        </Link>
       </section>
 
       <section className="bg-black py-24 flex flex-col items-center justify-center">
@@ -104,54 +105,54 @@ export default function Home() {
           />
 
           {/* 소개 버튼 */}
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className="inline-block mb-12 px-8 py-3 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition duration-300 transform hover:scale-105"
           >
             뉴진스 소개
-          </a>
+          </Link>
 
           {/* SNS 아이콘 */}
           <div className="flex flex-wrap justify-center gap-6">
-            <a
-              href="https://www.instagram.com/newjeans_official"
+            <Link
+              to="https://www.instagram.com/newjeans_official"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-white text-lg hover:text-pink-400 transition"
             >
               <CiInstagram className="text-2xl" />
               <span>Instagram</span>
-            </a>
+            </Link>
 
-            <a
-              href="https://www.facebook.com/official.newjeans"
+            <Link
+              to="https://www.facebook.com/official.newjeans"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-white text-lg hover:text-blue-600 transition"
             >
               <TiSocialFacebook className="text-2xl" />
               <span>Facebook</span>
-            </a>
+            </Link>
 
-            <a
-              href="https://x.com/NewJeans_ADOR"
+            <Link
+              to="https://x.com/NewJeans_ADOR"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-white text-lg hover:text-blue-400 transition"
             >
               <FaXTwitter className="text-2xl" />
               <span>Twitter</span>
-            </a>
+            </Link>
 
-            <a
-              href="https://www.youtube.com/@NewJeans_official"
+            <Link
+              to="https://www.youtube.com/@NewJeans_official"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-white text-lg hover:text-red-500 transition"
             >
               <FaYoutube className="text-2xl" />
               <span>YouTube</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
