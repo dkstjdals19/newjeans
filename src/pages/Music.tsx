@@ -22,10 +22,7 @@ export default function Music() {
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-teal-50 py-12">
-      <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-center text-pink-500 mb-12 tracking-tight drop-shadow-lg">
-        뉴진스 음악 페이지
-      </h1>
-
+      
       <div className="max-w-7xl mx-auto p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {songs.map((song, idx) => (
