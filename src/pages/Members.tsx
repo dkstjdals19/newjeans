@@ -17,6 +17,10 @@ export default function Members() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 via-blue-200 to-blue-300 flex flex-col items-center px-6 py-24 space-y-12 justify-center">
+      <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-center mb-12 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-400 to-cyan-400 drop-shadow-lg ">
+        뉴진스 멤버들 페이지❤️
+      </h1>
+
       <div className="max-w-7xl w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10">
 
         {/* 민지 카드 */}

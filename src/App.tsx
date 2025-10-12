@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Members from "./pages/Members";
 import Music from "./pages/Music";
 import About from "./pages/About";
+import Mv from "./pages/Mv";
 
 export default function App() {
   return (
@@ -36,6 +37,13 @@ export default function App() {
           >
             뉴진스 소개
           </Link>
+          <Link
+            to="/mv"
+            className="text-blue-800 font-semibold px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-white/50 hover:text-blue-900"
+          >
+            뉴진스 뮤비
+          </Link>
+          
         </div>
       </nav>
 
@@ -45,6 +53,7 @@ export default function App() {
         <Route path="/members" element={<Members />} />
         <Route path="/music" element={<Music />} />
         <Route path="/about" element={<About />} />
+        <Route path="/mv" element={<Mv/>}></Route>
       </Routes>
     </div>
   );

@@ -17,27 +17,36 @@ export default function Music() {
     { title: "Right Now", embedUrl: "https://open.spotify.com/embed/track/58Q3FZFs1YXPpliWQB5kXB?utm_source=generator" },
     { title: "Hurt", embedUrl: "https://open.spotify.com/embed/track/5expoVGQPvXuwBBFuNGqBd?utm_source=generator" },
     { title: "Cookie", embedUrl: "https://open.spotify.com/embed/track/2DwUdMJ5uxv20EhAildreg?utm_source=generator" },
+    { title: "Gods", embedUrl: "https://open.spotify.com/embed/track/62J3LcwTASdo624WsF3L6k?utm_source=generator" }
   ];
 
   return (
-  <div className=" flex justify-center items-center min-h-screen p-6 bg-gradient-to-b from-blue-50 via-blue-100 to-teal-50">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-      {songs.map((song, idx) => (
-        <div key={idx} className="flex flex-col items-center bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border-1">
-          <h3 className="text-gray-800 text-lg font-bold mb-2 text-center">{song.title}</h3>
-          <iframe
-            src={song.embedUrl}
-            width="100%"
-            height="80"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-            className="rounded-lg"
-          ></iframe>
+    <div>
+      <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-center text-pink-500 mb-12 tracking-tight drop-shadow-lg">
+        뉴진스 음악 페이지
+      </h1>
+
+      <div className="max-w-7xl mx-auto p-6 bg-gradient-to-b from-blue-50 via-blue-100 to-teal-50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {songs.map((song, idx) => (
+            <div key={idx} className="flex flex-col items-center bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+              <h3 className="text-gray-800 text-lg font-bold mb-2 text-center">{song.title}</h3>
+              <iframe
+                src={song.embedUrl}
+                width="100%"
+                height="80"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
-  </div>
+
+  
 );
 
 

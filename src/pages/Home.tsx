@@ -8,29 +8,40 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
       <section
         id="home"
-        className="bg-gradient-to-r from-purple-50 via-purple-100 to-pink-50 py-24 sm:py-32 flex items-center justify-center min-h-[500px]"
+        className="relative py-16 sm:py-24 flex items-center justify-center min-h-[1300px] overflow-hidden"
       >
-        <div className="text-center px-4">
-          <h2 className="text-5xl sm:text-7xl font-extrabold text-gray-900 mb-4 tracking-tight">
-            Welcome to NewJeans Project
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          src="/NEW JEANS, NewJeans - Videogame Ver..mp4"
+          className="absolute top-0 left-0 h-full w-full object-cover z-0"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+
+        <div className="text-center px-4 relative z-20">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white mb-4 tracking-tight">
+            Welcome to NewJeans Fanpage
           </h2>
-          <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             뉴진스 멤버들, 음악, 소개가 있는 팬 페이지
           </p>
           <Link
             to="/music"
-            className="inline-block px-8 py-3 bg-pink-400 text-white font-bold rounded-full shadow-md hover:bg-pink-500 transition duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-3 bg-pink-400 text-white font-bold rounded-full shadow-md hover:bg-pink-500 transition duration-300 transform sm:hover:scale-105"
           >
             음악 듣기
           </Link>
         </div>
       </section>
 
+
+
       {/* Members Section */}
-      <section className="py-16 bg-gray-50 flex flex-col items-center">
+      <section className="py-32 bg-gray-50 flex flex-col items-center">
         <div className="max-w-7xl w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 px-4 mb-8">
           {/* 민지 카드 */}
           <div className="bg-gradient-to-b from-purple-100 to-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105 flex flex-col items-center cursor-pointer">
@@ -93,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <section className="bg-black py-24 flex flex-col items-center justify-center">
+      <section className="bg-black py-14 flex flex-col items-center justify-center">
         <div className="text-center px-4">
           {/* 로고 */}
           <img
