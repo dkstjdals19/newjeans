@@ -1,4 +1,5 @@
 export default function Music() {
+  // 음악 제목과 임베드 URL
   const songs = [
     { title: "New Jeans", embedUrl: "https://open.spotify.com/embed/track/6rdkCkjk6D12xRpdMXy0I2?utm_source=generator" },
     { title: "Ditto", embedUrl: "https://open.spotify.com/embed/track/3r8RuvgbX9s7ammBn07D3W?utm_source=generator" },
@@ -25,12 +26,14 @@ export default function Music() {
       
       <div className="max-w-7xl mx-auto p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {/* 격자 형태로 보여주면서 map 함수로 화면에 띄우기*/}
           {songs.map((song, idx) => (
             <div
               key={idx}
               className="flex flex-col items-center bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200"
             >
               <h3 className="text-gray-800 text-lg font-bold mb-2 text-center">{song.title}</h3>
+              {/* 유튜브에서 가져와서 embedURL 넣고 iframe태그에 */}
               <iframe
                 src={song.embedUrl}
                 width="100%"

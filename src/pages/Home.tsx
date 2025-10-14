@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
+    // 최상위 div 히어로 섹션
     <div>
       <section
         id="home"
@@ -40,7 +41,7 @@ export default function Home() {
 
 
 
-      {/* Members Section */}
+      {/* 중간 div (멤버들 보여주기) */}
       <section className="py-32 bg-gray-50 flex flex-col items-center">
         <div className="max-w-7xl w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 px-4 mb-8">
           {/* 민지 카드 */}
@@ -94,7 +95,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 멤버들 보러가기 버튼 */}
+        
         <Link
           to="/members"
           className="inline-block px-8 py-3 bg-pink-400 text-white font-bold rounded-full shadow-md hover:bg-pink-500 transition duration-300 transform hover:scale-105"
@@ -103,17 +104,17 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* Footer Section */}
+      {/* 아럐쪽 div */}
       <section className="bg-black py-14 flex flex-col items-center justify-center">
         <div className="text-center px-4">
-          {/* 로고 */}
+          
           <img
             src="/HomePage_NewJeansLogo.png"
             alt="NewJeans Logo"
             className="w-60 sm:w-80 mb-8 mx-auto"
           />
 
-          {/* 소개 버튼 */}
+          
           <Link
             to="/about"
             className="inline-block mb-12 px-8 py-3 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition duration-300 transform hover:scale-105"
@@ -121,8 +122,8 @@ export default function Home() {
             뉴진스 소개
           </Link>
 
-          {/* SNS 아이콘 */}
           <div className="flex flex-wrap justify-center gap-6">
+            {/* 인스타그램 a 태그 */}
             <a
               href="https://www.instagram.com/newjeans_official"
               target="_blank"
@@ -132,7 +133,7 @@ export default function Home() {
               <CiInstagram className="text-2xl" />
               <span>Instagram</span>
             </a>
-
+            {/* 페이스북 a 태그  */}
             <a
               href="https://www.facebook.com/official.newjeans"
               target="_blank"
@@ -142,7 +143,7 @@ export default function Home() {
               <TiSocialFacebook className="text-2xl" />
               <span>Facebook</span>
             </a>
-
+            {/* 트위터 a 태그 */}
             <a
               href="https://x.com/NewJeans_ADOR"
               target="_blank"
@@ -152,7 +153,7 @@ export default function Home() {
               <FaXTwitter className="text-2xl" />
               <span>Twitter</span>
             </a>
-
+            {/* 유튜브 a태그 */}
             <a
               href="https://www.youtube.com/@NewJeans_official"
               target="_blank"

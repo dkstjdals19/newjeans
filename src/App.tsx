@@ -49,11 +49,11 @@ export default function App() {
 
 
       <Routes>
-        <Route path="/" element={<Home />} />           {/* 기본 홈 경로 */}
-        <Route path="/members" element={<Members />} />
-        <Route path="/music" element={<Music />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/mv" element={<Mv/>}></Route>
+        <Route path="/" element={<Home />} />           {/* 홈 경로 */}
+        <Route path="/members" element={<Members />} /> {/* 멤버들 페이지 */}
+        <Route path="/music" element={<Music />} /> {/* 음악 페이지*/}
+        <Route path="/about" element={<About />} /> {/* 소개 페이지 */}
+        <Route path="/mv" element={<Mv/>}></Route> {/* 뮤비 페이지 */}
       </Routes>
     </div>
   );

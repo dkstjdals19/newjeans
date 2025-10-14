@@ -9,10 +9,12 @@ export default function About() {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed', 
         backgroundRepeat: 'no-repeat', 
-      }}
+      }} // 배경
     >
-      <div className="absolute inset-0 bg-black opacity-30"></div>
+      {/* 오버레이 추가해주기 */}
+      <div className="absolute inset-0 bg-black opacity-30"></div> 
 
+      {/* 안에 내용들 */}
       <div className="relative z-10 flex flex-col items-center w-full">
         <img 
           src="newjeans_logo.jpg" 

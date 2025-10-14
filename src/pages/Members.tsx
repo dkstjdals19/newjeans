@@ -7,6 +7,7 @@ export default function Members() {
 
   const [selected, setSelected] = useState<MemberKey | null>(null);
 
+  // 멤버들 정보
   const members: Record<MemberKey, { description: string[]; img: string }> = {
     민지: { description: ["출생일: 2004년 5월 7일","출생지: 대한민국 강원도 춘천","데뷔: 2022년 7월 22일","브랜드 모델: 샤넬 하우스 앰버서더","MBTI: ESTJ","키: 169cm"], img: "/Minji.jpg" },
     하니: { description: ["출생일: 2004년 10월 6일","출생지: 호주 빅토리아주 멜버른","데뷔: 2022년 7월 22일","브랜드 모델: 구찌 글로벌 앰버서더","MBTI: INFP","키: 162cm"], img: "/Hanni.jpeg" },
@@ -17,6 +18,7 @@ export default function Members() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 via-blue-200 to-blue-300 flex flex-col items-center px-6 py-24 space-y-12 justify-center">
+      {/* 아무것도 안했을 때 보이는 페이지 */}
       <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-center mb-12 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-400 to-cyan-400 drop-shadow-lg ">
         뉴진스 멤버들 페이지❤️
       </h1>
@@ -58,10 +60,11 @@ export default function Members() {
           <p className="text-blue-600 font-medium">막내 & 보컬</p>
         </div>
       </div>
+      {/* 멤버들 클릭했을 때 모달 띄워주기 */}
       {selected && (
         <div
           className="fixed inset-0 bg-gray-400 bg-opacity-40 backdrop-blur-sm flex items-center justify-center z-50"
-          onClick={() => setSelected(null)}
+          onClick={() => setSelected(null)} 
         >
           <div
             className="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full"
@@ -73,6 +76,7 @@ export default function Members() {
               className="w-40 h-40 rounded-full mb-4 mx-auto"
             />
             <h2 className="text-3xl font-bold mb-4 text-center">{selected}</h2>
+            {/* 멤버들 map 함수로 효율 적이게 화면에 띄우기 */}
             <ul className="list-disc list-inside space-y-2">
               {members[selected].description.map((item, idx) => (
                 <li key={idx} className="text-gray-700">{item}</li>

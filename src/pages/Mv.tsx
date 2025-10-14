@@ -1,4 +1,5 @@
 export default function Mv() {
+  // 뮤비 정보들 제목과 유튜브 URL 비디오 재생을 위한 id
   const MusicVideos = [
     { title: "New Jeans", ytUrl: "https://img.youtube.com/vi/kcelgrGY1h8/hqdefault.jpg", id: "kcelgrGY1h8" },
     { title: "Ditto", ytUrl: "https://img.youtube.com/vi/Km71Rr9K-Bw/hqdefault.jpg", id: "Km71Rr9K-Bw" },
@@ -23,6 +24,7 @@ export default function Mv() {
   return (
     <div className="min-h-screen bg-purple-50">
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        {/* 음악 페이지와 비슷하게 격자형태로 map 함수로 띄우기 */}
         {MusicVideos.map((video) => (
           <div
             key={video.id}
