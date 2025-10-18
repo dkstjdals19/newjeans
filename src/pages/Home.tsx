@@ -25,7 +25,7 @@ export default function Home() {
 
         <div className="text-center px-4 relative z-20">
           <h2 className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white mb-4 tracking-tight">
-            Welcome to NewJeans Fanpage
+            Welcome to NewJeans Fanpage🐰
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             뉴진스 멤버들, 음악, 소개가 있는 팬 페이지
